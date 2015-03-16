@@ -62,7 +62,7 @@ def main():
   empty_nii = np.zeros(mr.shape)
   empty_nii[mr.get_data()!=0] = Z
   Z_nii_fixed = nib.nifti1.Nifti1Image(empty_nii,affine=mr.get_affine(),header=mr.get_header())
-  nib.save(Z_nii_fixed,output_nii)
+  nib.save(Z_nii_fixed,args.output_nii)
 
 # From Chrisfilo alleninf
 def nifti_file(string):
