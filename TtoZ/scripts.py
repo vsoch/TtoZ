@@ -70,7 +70,7 @@ def nifti_file(string):
         msg = "%r does not exist" % string
         raise argparse.ArgumentTypeError(msg)
     try:
-        nii = nb.load(string)
+        nii = nib.load(string)
     except IOError as e:
         raise argparse.ArgumentTypeError(str(e))
     except:
