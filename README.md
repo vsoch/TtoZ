@@ -15,7 +15,7 @@ Here we show the image histograms (from mricron) for:
 
 2) and 3) have truncation of the distributions.  For both 3) and 4) it was also necessary to convert p-values exactly == 1 to 0.999999, as a value of exactly 1 will be converted to inf when converted to the standard normal score.
 
-Note that the y-axis scale for the second image, 3dcalc, extends to a density of 2.0 due to the number of zeros that are replaced to prevent error. We chose a consistent y-axis scale up to 0.8 for the other images, otherwise we would not be able to see the distributions. 
+Note that the y-axis scales are slightly different, most noticably for the second image, 3dcalc, which extends to a density of 2.0 due to the number of zeros that are replaced to prevent error. 
 
 # Installation
 

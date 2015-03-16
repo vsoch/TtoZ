@@ -32,18 +32,19 @@ map_types = c("t-stat map","z-stat map","z-stat map","z-stat map")
 
 # Make the ggplots
 
-make_plot = function(df,color,image_name,map_type){
-return(ggplot(df,aes(x=value, fill=color)) + 
+make_plot = function(df,n,image_name,map_type){
+return(ggplot(df,aes(x=value, fill=colors[n])) + 
   geom_density(alpha=0.25,binwidth=1) +
   theme(legend.position="none") +
+  xlim(-67,37) +
   xlab(paste(image_name,map_type)) +
   guides(fill=FALSE))
 }
 
-plot1 = make_plot(data[[1]],colors[1],names(data[1]),map_types[1])
-plot2 = make_plot(data[[2]],colors[2],names(data[2]),map_types[2])
-plot3 = make_plot(data[[3]],colors[3],names(data[3]),map_types[3])
-plot4 = make_plot(data[[4]],colors[4],names(data[4]),map_types[4])
+plot1 = make_plot(data[[1]],n,names(data[1]),map_types[1])
+plot2 = make_plot(data[[2]],n,names(data[2]),map_types[2])
+plot3 = make_plot(data[[3]],n,names(data[3]),map_types[3])
+plot4 = make_plot(data[[4]],n,names(data[4]),map_types[4])
 g = arrangeGrob(plot1,plot2,plot3,plot4,ncol=4)
-ggsave(file="new_histograms.png",g)
+ggsave(file="histograms.png",g)
 
