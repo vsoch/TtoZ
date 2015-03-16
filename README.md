@@ -24,22 +24,22 @@ Here we show the image histograms (from mricron) for:
 
      usage: TtoZ [-h] [--output_nii OUTPUT_NII] t_stat_map dof
 
-     Convert a whole brain T score map to a Z score map without loss of precision
-     for strongly positive and negative values.
+     Convert a whole brain T score map to a Z score map 
+     without loss of precision for strongly positive and 
+     negative values.
 
      positional arguments:  
-       t_stat_map       T-score statistical map in the form of a 3D NIFTI file (.nii or .nii.gz).
-       dof              Degrees of freedom (number of subjects in group - 2)
+       t_stat_map       T-score statistical map in the form 
+                        of a 3D NIFTI file (.nii or .nii.gz).
+       dof              Degrees of freedom 
+                        (number of subjects in group - 2)
 
       optional arguments:
        -h, --help               show this help message and exit
-       --output_nii OUTPUT_NII  The name for the output Z-Score Map.
+       --output_nii OUTPUT_NII  name for the output Z-Score Map.
 
 
 # Example
 
-     TtoZ t_stat_map.nii.gz 484 z_score_map.nii
-
-
-
+     TtoZ t_stat_map.nii.gz 484 --output_nii=z_score_map.nii
 
