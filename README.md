@@ -8,10 +8,10 @@ For background about the problem, see [Hughett's paper](doc/JStats_Hughett.pdf).
 
 Here we show the image histograms (from mricron) for: 
 
-1) [the original t-stat map](example/tfMRI_LANGUAGE_STORY.nii_tstat1.nii.gz) with 484 degrees of freedom, 
-2) a [z-score map](example/zstat_afni.nii) produced with AFNI's 3dcalc (`3dcalc -a tstat.nii.gz -expr 'fitt_t2z (a,484)' -prefix afni_zstat.nii -float`), 
-3) a [z-score map](example/zstat_nosplit.nii) produced using scipy.stats (method equivalent to TtoZ EXCEPT not splitting into positive and negative values), and 
-4) a [z-score map](example/zstat_ttz.nii) produced with TtoZ (Hughett's method that splits at 0 into two sets first). 
+ 1. [the original t-stat map](example/tfMRI_LANGUAGE_STORY.nii_tstat1.nii.gz) with 484 degrees of freedom, 
+ 2. a [z-score map](example/zstat_afni.nii) produced with AFNI's 3dcalc (`3dcalc -a tstat.nii.gz -expr 'fitt_t2z (a,484)' -prefix afni_zstat.nii -float`), 
+ 3. a [z-score map](example/zstat_nosplit.nii) produced using scipy.stats (method equivalent to TtoZ EXCEPT not splitting into positive and negative values), and 
+ 4. a [z-score map](example/zstat_ttz.nii) produced with TtoZ (Hughett's method that splits at 0 into two sets first). 
 
 2) and 3) have truncation of the distributions.  For both 3) and 4) it was also necessary to convert p-values exactly == 1 to 0.999999, as a value of exactly 1 will be converted to inf when converted to the standard normal score.
 
