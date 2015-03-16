@@ -49,11 +49,11 @@ def main():
   t2 = nonzero[k2]
 
   # Calculate p values for <=0
-  p_values_t1 = t.cdf(t1, df = dof)
+  p_values_t1 = t.cdf(t1, df = args.dof)
   z_values_t1 = norm.ppf(p_values_t1)
 
   # Calculate p values for > 0
-  p_values_t2 = t.cdf(-t2, df = dof)
+  p_values_t2 = t.cdf(-t2, df = args.dof)
   z_values_t2 = -norm.ppf(p_values_t2)
   Z[k1] = z_values_t1
   Z[k2] = z_values_t2
