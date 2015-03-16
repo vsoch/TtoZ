@@ -13,6 +13,7 @@
 # http://www.stats.uwo.ca/faculty/aim/2010/JSSSnipets/V23N1.pdf
 
 import sys
+import os
 import argparse
 import numpy as np
 import nibabel as nib

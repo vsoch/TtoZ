@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/bin/sh
 
 t_stat_nii="tfMRI_LANGUAGE_STORY.nii_tstat1.nii.gz"
 
@@ -8,4 +8,4 @@ dof=484
 # Our output file
 output_nii="Z_score_map.nii"
 
-python ../TtoZ.py $t_stat_nii $dof $output_nii
+TtoZ $t_stat_nii $dof --output_nii=$output_nii
