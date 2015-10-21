@@ -1,7 +1,7 @@
-afni = "zstat_afni.nii"
-original = "tfMRI_LANGUAGE_STORY.nii_tstat1.nii.gz"
-ttz = "zstat_ttz.nii"
-nosplit = "zstat_nosplit.nii"
+afni = "../example/zstat_afni.nii"
+original = "../example/tfMRI_LANGUAGE_STORY.nii_tstat1.nii.gz"
+ttz = "../example/zstat_ttz.nii"
+nosplit = "../example/zstat_nosplit.nii"
 
 library(Rniftilib)
 library(plyr)
@@ -33,12 +33,12 @@ map_types = c("t-stat map","z-stat map","z-stat map","z-stat map")
 # Make the ggplots
 
 make_plot = function(df,n,image_name,map_type){
-return(ggplot(df,aes(x=value, fill=colors[n])) + 
-  geom_density(alpha=0.25,binwidth=1) +
-  theme(legend.position="none") +
-  xlim(-67,37) +
-  xlab(paste(image_name,map_type)) +
-  guides(fill=FALSE))
+  return(ggplot(df,aes(x=value, fill=colors[n])) + 
+           geom_density(alpha=0.25,binwidth=1) +
+           theme(legend.position="none") +
+           xlim(-67,37) +
+           xlab(paste(image_name,map_type)) +
+           guides(fill=FALSE))
 }
 
 plot1 = make_plot(data[[1]],n,names(data[1]),map_types[1])
@@ -47,4 +47,3 @@ plot3 = make_plot(data[[3]],n,names(data[3]),map_types[3])
 plot4 = make_plot(data[[4]],n,names(data[4]),map_types[4])
 g = arrangeGrob(plot1,plot2,plot3,plot4,ncol=4)
 ggsave(file="histograms.png",g)
-

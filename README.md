@@ -1,5 +1,7 @@
 # TtoZ
 
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.32508.svg)](http://dx.doi.org/10.5281/zenodo.32508)
+
 TtoZ is a python implementation of Hughett's t-to-z tranform for whole brain statistical maps. 
 
 For background about the problem, see [Hughett's paper](doc/JStats_Hughett.pdf). For a detailed example of the problem pertaining to whole brain statistical maps, see [this ipython notebook](http://nbviewer.ipython.org/github/vsoch/TtoZ/blob/master/doc/t_to_z_procedure.ipynb). For a more concise summary of the particular problems addressed by Hughett's algorithm, as compared to traditional procedures using scipy see [this ipython notebook](http://nbviewer.ipython.org/github/vsoch/TtoZ/blob/master/doc/TtoZ_method_comparison.ipynb).
