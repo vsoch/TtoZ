@@ -24,7 +24,7 @@ def main():
   parser = argparse.ArgumentParser(
   description="Convert a whole brain T score map to a Z score map without loss of precision for strongly positive and negative values.")
   parser.add_argument("t_stat_map", help="T-score statistical map in the form of a 3D NIFTI file (.nii or .nii.gz).", type=nifti_file)
-  parser.add_argument("dof", help="Degrees of freedom (number of subjects in group - 2)",type=int)
+  parser.add_argument("dof", help="Degrees of freedom (eg. for a two-sample T-test: number of subjects in group - 2)",type=int)
   parser.add_argument("--output_nii", help="The name for the output Z-Score Map.",type=str,default="z_stat_map.nii")
   args = parser.parse_args()
 
