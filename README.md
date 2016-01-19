@@ -23,6 +23,12 @@ Note that the y-axis scales are slightly different, most noticably for the secon
 
      pip install git+https://github.com/vsoch/TtoZ.git
 
+
+or from pypi:
+
+    pip install TtoZ
+
+
 # Usage
 
      usage: TtoZ [-h] [--output_nii OUTPUT_NII] t_stat_map dof
