@@ -8,4 +8,4 @@ dof=484
 # Our output file
 output_nii="Z_score_map.nii"
 
-TtoZ $t_stat_nii $dof --output_nii=$output_nii
+TtoZ --t_stat_map=$t_stat_nii --dof=$dof --output_nii=$output_nii

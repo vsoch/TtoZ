@@ -44,5 +44,5 @@ Note that the y-axis scales are slightly different, most noticably for the secon
 
 # Example
 
-     TtoZ t_stat_map.nii.gz 484 --output_nii=z_score_map.nii
+     TtoZ --t_stat_map=t_stat_map.nii.gz --dof=484 --output_nii=z_score_map.nii
 
