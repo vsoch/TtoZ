@@ -31,21 +31,20 @@ or from pypi:
 
 # Usage
 
-     usage: TtoZ [-h] [--output_nii OUTPUT_NII] t_stat_map dof
+      usage: TtoZ [-h] --t_stat_map T_STAT_MAP --dof DOF [--output_nii OUTPUT_NII]
 
-     Convert a whole brain T score map to a Z score map 
-     without loss of precision for strongly positive and 
-     negative values.
-
-     positional arguments:  
-       t_stat_map       T-score statistical map in the form 
-                        of a 3D NIFTI file (.nii or .nii.gz).
-       dof              Degrees of freedom 
-                        (number of subjects in group - 2)
+      Convert a whole brain T score map to a Z score map without loss of precision
+      for strongly positive and negative values.
 
       optional arguments:
-       -h, --help               show this help message and exit
-       --output_nii OUTPUT_NII  name for the output Z-Score Map.
+       -h, --help            show this help message and exit
+        --t_stat_map T_STAT_MAP
+                              T-score statistical map in the form of a 3D NIFTI file
+                              (.nii or .nii.gz).
+        --dof DOF             Degrees of freedom (eg. for a two-sample T-test:
+                              number of subjects in group - 2)
+        --output_nii OUTPUT_NII
+                              The name for the output Z-Score Map.
 
 
 # Example
