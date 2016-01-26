@@ -4,20 +4,16 @@ import os
 
 here = os.path.abspath(os.path.dirname(__file__))
 
-# Get the long description from the relevant file
-with codecs.open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
-    long_description = f.read()
-
 setup(
     name="TtoZ",
 
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # http://packaging.python.org/en/latest/tutorial.html#version
-    version='0.1.0',
+    version='0.1.2',
 
     description="Convert a whole brain T score map to a Z score map without loss of precision for strongly positive and negative values.",
-    long_description=long_description,
+    long_description="Convert a whole brain T score map to a Z score map without loss of precision for strongly positive and negative values.",
 
     # The project URL.
     url='https://github.com/vsoch/TtoZ',
